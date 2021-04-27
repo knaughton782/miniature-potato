@@ -1,4 +1,5 @@
-import Expenses from './components/Expenses';
+import React from 'react';
+import Expenses from './components/Expenses/Expenses';
 
 function App(props) {
 
@@ -27,8 +28,9 @@ function App(props) {
 
   return (
 
-    <Expenses expenses={expenses} />
-    
+    <div>
+      <h2>Expense Tracker</h2>
+      <Expenses expenses={expenses} /></div>
   );
 }
 
