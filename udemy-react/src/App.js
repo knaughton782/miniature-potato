@@ -1,7 +1,7 @@
 import React from 'react';
 import Expenses from './components/Expenses/Expenses';
 
-function App(props) {
+const App = (props) => {
 
   const expenses = [
     {
