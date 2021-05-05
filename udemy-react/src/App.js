@@ -1,4 +1,5 @@
 import React from 'react';
+import ExpensesFilter from './components/ExpensesFilter/ExpensesFilter'
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
@@ -26,12 +27,18 @@ const App = (props) => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log('In app.js');
+    console.log(expense);
+  }
+
 
   return (
 
     <div>
-      <h2>Expense Tracker</h2>
-      <NewExpense />
+      <h2 style={{marginLeft: '45px'}}>Expense Tracker</h2>
+      <ExpensesFilter />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses expenses={expenses} />
     </div>
   );
